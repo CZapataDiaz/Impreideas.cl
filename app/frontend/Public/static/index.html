@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImpreIdeas - Merchandising e Impresión Corporativa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart-styles.css">
+    <link rel="stylesheet" href="personalization-styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Top bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+56 9 9078-6018</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>ventas@impreideas.cl</span>
+                    </div>
+                </div>
+                <div class="business-info">
+                    <span>Venta mayorista • Mínimo 20 unidades</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main header -->
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <!-- Logo -->
+                    <div class="logo">
+                        <i class="fas fa-lightbulb"></i>
+                        <div class="logo-text">
+                            <h1>ImpreIdeas</h1>
+                            <p>Impresión & Ideas Corporativas</p>
+                        </div>
+                    </div>
+
+                    <!-- Search bar -->
+                    <div class="search-bar">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Buscar productos, categorías...">
+                    </div>
+
+                    <!-- Navigation -->
+                    <nav class="nav-desktop">
+                        <a href="#catalog">Catálogo</a>
+                        <a href="#about">Nosotros</a>
+                        <a href="#contact">Contacto</a>
+                        
+                        <!-- Dark Mode Toggle -->
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon" id="themeIcon"></i>
+                            <span id="themeText">Oscuro</span>
+                        </button>
+                        
+                        <button class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cartCount">0</span>
+                        </button>
+                    </nav>
+
+                    <!-- Mobile menu button -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile search -->
+                <div class="mobile-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="mobileSearchInput" placeholder="Buscar productos...">
+                </div>
+
+                <!-- Mobile navigation -->
+                <nav class="nav-mobile" id="mobileNav">
+                    <a href="#catalog">Catálogo</a>
+                    <a href="#personalization">Personalización</a>
+                    <a href="#about">Nosotros</a>
+                    <a href="#contact">Contacto</a>
+                    
+                    <!-- Mobile Dark Mode Toggle -->
+                    <button class="theme-toggle" id="mobileThemeToggle">
+                        <i class="fas fa-moon" id="mobileThemeIcon"></i>
+                        <span id="mobileThemeText">Modo Oscuro</span>
+                    </button>
+                    
+                    <div class="mobile-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Carrito (<span id="mobileCartCount">0</span>)</span>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- Left Content -->
+                <div class="hero-left">
+                    <div class="badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Especialistas en Impresión Corporativa</span>
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Transforma tus
+                        <span class="highlight">Ideas en Productos</span>
+                    </h1>
+                    
+                    <p class="hero-description">
+                        Productos promocionales personalizados de alta calidad para empresas. 
+                        Desde tazas hasta textiles, convertimos tus ideas corporativas en realidad.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <button class="btn-primary">
+                            Ver Catálogo
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn-outline">
+                            Solicitar Cotización
+                        </button>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Venta Mayorista</h3>
+                                <p>Precios especiales para empresas</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Entrega Rápida</h3>
+                                <p>Producción y envío en 5-7 días</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Calidad Premium</h3>
+                                <p>Productos de primera calidad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="hero-right">
+                    <div class="product-showcase">
+                        <div class="product-card card-1">
+                            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=200&h=200&fit=crop" alt="Taza corporativa">
+                            <h3>Tazas Personalizadas</h3>
+                            <p>Desde $0000 CLP c/u</p>
+                        </div>
+                        <div class="product-card card-2">
+                            <img src="https://images.unsplash.com/photo-1586952518485-11b180e92764?w=200&h=200&fit=crop" alt="Lapiceras ejecutivas">
+                            <h3>Lapiceras Premium</h3>
+                            <p>Desde $0000 CLP c/u</p>
+                        </div>
+                        <div class="product-card card-3">
+                            <img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=200&h=200&fit=crop" alt="Textil corporativo">
+                            <h3>Textil Corporativo</h3>
+                            <p>Desde $0000 CLP c/u</p>
+                        </div>
+                        <div class="product-card card-4">
+                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=200&h=200&fit=crop" alt="Accesorios promocionales">
+                            <h3>Accesorios</h3>
+                            <p>Desde $0000 CLP c/u</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Empresas Confiaron</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50k+</div>
+                    <div class="stat-label">Productos Entregados</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">24h</div>
+                    <div class="stat-label">Tiempo de Respuesta</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">4-6</div>
+                    <div class="stat-label">Días de Producción</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Catalog -->
+    <section id="catalog" class="catalog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Catálogo de Productos</h2>
+                <p>Descubre nuestra amplia selección de productos promocionales e ideas corporativas personalizadas</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="filters">
+                <div class="categories" id="categories">
+                    <!-- esta categorías se completará mediante JavaScript -->
+                </div>
+                
+                <div class="sort-controls">
+                    <div class="sort-label">
+                        <i class="fas fa-filter"></i>
+                        <span>Ordenar por:</span>
+                    </div>
+                    <select id="sortSelect" class="sort-select">
+                        <option value="name">Nombre A-Z</option>
+                        <option value="price-low">Precio: Menor a Mayor</option>
+                        <option value="price-high">Precio: Mayor a Menor</option>
+                        <option value="min-order">Pedido Mínimo</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Results count -->
+            <div class="results-count" id="resultsCount">
+                <!-- Se completará con JavaScript -->
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Los productos se completarán mediante JavaScript -->
+            </div>
+
+            <!-- Empty state -->
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <i class="fas fa-filter"></i>
+                <h3>No se encontraron productos</h3>
+                <p>Intenta ajustar los filtros o la búsqueda para encontrar lo que buscas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalBody">
+                <!-- Se completará con JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="cart.js"></script>
+    <script src="personalization.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Script de depuración -->
+    <script>
+        window.addEventListener('load', function() {
+            console.log('Página cargada completamente');
+            console.log('¿mockProducts existe?', typeof mockProducts !== 'undefined');
+            console.log('¿mockCategories existe?', typeof mockCategories !== 'undefined');
+            if (typeof mockProducts !== 'undefined') {
+                console.log('Número de productos:', mockProducts.length);
+            }
+            
+            // Verificar elementos del DOM
+            console.log('¿productsGrid existe?', document.getElementById('productsGrid') !== null);
+            console.log('¿categories existe?', document.getElementById('categories') !== null);
+            console.log('¿cart existe?', typeof cart !== 'undefined');
+            console.log('¿personalization existe?', typeof personalization !== 'undefined');
+        });
+    </script>
+</body>
+</html>
