@@ -1,5 +1,5 @@
 // Datos simulados completos para ImpreIdeas - E-commerce B2B de impresión y merchandising
-const mockProducts = [
+export const mockProducts = [
     // TAZAS
     {
         id: 1,
@@ -10,12 +10,8 @@ const mockProducts = [
         image: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=300&h=300&fit=crop",
         description: "Taza cerámica de alta calidad ideal para branding corporativo",
         personalizationAreas: [
-            { id: 1, name: "Frente", price: 0
-    
-             },
-            { id: 2, name: "Ambos lados", price: 0
-    
-             }
+            { id: 1, name: "Frente", price: 0 },
+            { id: 2, name: "Ambos lados", price: 0 }
         ],
         availableColors: ["Blanco", "Azul", "Negro", "Rojo"]
     },
@@ -25,15 +21,11 @@ const mockProducts = [
         category: "Tazas",
         basePrice: 0,
         minOrder: 25,
-        image: "img/taza-termica.jpg",
+        image: "https://images.unsplash.com/photo-1578320439767-ad884ac4c9e7?w=300&h=300&fit=crop",
         description: "Taza térmica con tapa para llevar, perfecta para oficinas móviles",
         personalizationAreas: [
-            { id: 1, name: "Lateral", price: 0
-    
-             },
-            { id: 2, name: "Tapa", price: 0
-    
-             }
+            { id: 1, name: "Lateral", price: 0 },
+            { id: 2, name: "Tapa", price: 0 }
         ],
         availableColors: ["Acero", "Negro mate", "Blanco", "Azul marino"]
     },
@@ -43,15 +35,11 @@ const mockProducts = [
         category: "Tazas",
         basePrice: 0,
         minOrder: 30,
-        image: "img/taza-artesanal.jpg",
+        image: "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?w=300&h=300&fit=crop",
         description: "Taza de cerámica con acabado artesanal, ideal para eventos especiales",
         personalizationAreas: [
-            { id: 1, name: "Frente", price: 0
-    
-             },
-            { id: 2, name: "Alrededor", price: 0
-    
-             }
+            { id: 1, name: "Frente", price: 0 },
+            { id: 2, name: "Alrededor", price: 0 }
         ],
         availableColors: ["Terracota", "Verde oliva", "Azul cobalto", "Crema"]
     },
@@ -63,15 +51,11 @@ const mockProducts = [
         category: "Útiles",
         basePrice: 0,
         minOrder: 100,
-        image: "img/lapicera-ejecutiva.jpg",
+        image: "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=300&h=300&fit=crop",
         description: "Bolígrafo de metal con acabado premium para empresas",
         personalizationAreas: [
-            { id: 1, name: "Lateral", price: 0
-    
-             },
-            { id: 2, name: "Clip", price: 0
-    
-             }
+            { id: 1, name: "Lateral", price: 0 },
+            { id: 2, name: "Clip", price: 0 }
         ],
         availableColors: ["Plateado", "Dorado", "Negro", "Azul"]
     },
@@ -81,15 +65,11 @@ const mockProducts = [
         category: "Útiles",
         basePrice: 0,
         minOrder: 50,
-        image: "img/lapices-colores.jpg",
+        image: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=300&h=300&fit=crop",
         description: "Caja de 12 lápices de colores con grabado personalizado",
         personalizationAreas: [
-            { id: 1, name: "Caja", price: 0
-    
-             },
-            { id: 2, name: "Lápices individuales", price: 0
-    
-             }
+            { id: 1, name: "Caja", price: 0 },
+            { id: 2, name: "Lápices individuales", price: 0 }
         ],
         availableColors: ["Caja natural", "Caja negra", "Caja blanca"]
     },
@@ -99,12 +79,10 @@ const mockProducts = [
         category: "Útiles",
         basePrice: 0,
         minOrder: 80,
-        image: "img/marcadores-set.jpg",
+        image: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=300&h=300&fit=crop",
         description: "Set de 4 marcadores permanentes con estuche personalizado",
         personalizationAreas: [
-            { id: 1, name: "Estuche", price: 0
-    
-             }
+            { id: 1, name: "Estuche", price: 0 }
         ],
         availableColors: ["Estuche negro", "Estuche gris", "Estuche azul"]
     },
@@ -114,15 +92,11 @@ const mockProducts = [
         category: "Útiles",
         basePrice: 0,
         minOrder: 20,
-        image: "img/calculadora.jpg",
+        image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=300&h=300&fit=crop",
         description: "Calculadora profesional con pantalla grande y grabado láser",
         personalizationAreas: [
-            { id: 1, name: "Parte superior", price: 0
-    
-             },
-            { id: 2, name: "Lateral", price: 0
-    
-             }
+            { id: 1, name: "Parte superior", price: 0 },
+            { id: 2, name: "Lateral", price: 0 }
         ],
         availableColors: ["Negro", "Gris", "Plata"]
     },
@@ -134,15 +108,11 @@ const mockProducts = [
         category: "Papelería",
         basePrice: 0,
         minOrder: 25,
-        image: "img/libreta-corporativa.jpg",
+        image: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=300&h=300&fit=crop",
         description: "Cuaderno tapa dura con hojas punteadas, ideal para ejecutivos",
         personalizationAreas: [
-            { id: 1, name: "Portada", price: 0
-    
-             },
-            { id: 2, name: "Contraportada", price: 0
-    
-             }
+            { id: 1, name: "Portada", price: 0 },
+            { id: 2, name: "Contraportada", price: 0 }
         ],
         availableColors: ["Negro", "Azul marino", "Gris", "Marrón"]
     },
@@ -152,15 +122,11 @@ const mockProducts = [
         category: "Papelería",
         basePrice: 0,
         minOrder: 15,
-        image: "img/agenda-ejecutiva.jpg",
+        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=300&h=300&fit=crop",
         description: "Agenda anual de cuero sintético con secciones organizadas",
         personalizationAreas: [
-            { id: 1, name: "Portada frontal", price: 0
-    
-             },
-            { id: 2, name: "Páginas internas", price: 0
-    
-             }
+            { id: 1, name: "Portada frontal", price: 0 },
+            { id: 2, name: "Páginas internas", price: 0 }
         ],
         availableColors: ["Negro", "Marrón oscuro", "Azul ejecutivo", "Burdeos"]
     },
@@ -170,15 +136,11 @@ const mockProducts = [
         category: "Papelería",
         basePrice: 0,
         minOrder: 100,
-        image: "img/notas-adhesivas.jpg",
+        image: "https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=300&h=300&fit=crop",
         description: "Set de notas adhesivas de diferentes tamaños con logo impreso",
         personalizationAreas: [
-            { id: 1, name: "Cada hoja", price: 0
-    
-             },
-            { id: 2, name: "Portada del bloque", price: 0
-    
-             }
+            { id: 1, name: "Cada hoja", price: 0 },
+            { id: 2, name: "Portada del bloque", price: 0 }
         ],
         availableColors: ["Amarillo", "Rosa", "Azul", "Verde", "Multi-color"]
     },
@@ -188,15 +150,11 @@ const mockProducts = [
         category: "Papelería",
         basePrice: 0,
         minOrder: 50,
-        image: "img/carpeta-corporativa.jpg",
+        image: "https://images.unsplash.com/photo-1565022843502-85d99e6b0020?w=300&h=300&fit=crop",
         description: "Carpeta de presentación con bolsillos internos y cierre elástico",
         personalizationAreas: [
-            { id: 1, name: "Portada", price: 0
-    
-             },
-            { id: 2, name: "Lomo", price: 0
-    
-             }
+            { id: 1, name: "Portada", price: 0 },
+            { id: 2, name: "Lomo", price: 0 }
         ],
         availableColors: ["Negro", "Azul", "Rojo", "Verde", "Gris"]
     },
@@ -208,15 +166,11 @@ const mockProducts = [
         category: "Accesorios",
         basePrice: 0,
         minOrder: 200,
-        image: "img/llavero-metalico.jpg",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=300&fit=crop",
         description: "Llavero de metal resistente con grabado láser",
         personalizationAreas: [
-            { id: 1, name: "Una cara", price: 0
-    
-             },
-            { id: 2, name: "Ambas caras", price: 0
-    
-             }
+            { id: 1, name: "Una cara", price: 0 },
+            { id: 2, name: "Ambas caras", price: 0 }
         ],
         availableColors: ["Plateado", "Dorado", "Negro mate"]
     },
@@ -226,15 +180,11 @@ const mockProducts = [
         category: "Accesorios",
         basePrice: 0,
         minOrder: 30,
-        image: "img/botella-termica.jpg",
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=300&fit=crop",
         description: "Botella de acero inoxidable con aislamiento térmico",
         personalizationAreas: [
-            { id: 1, name: "Lateral", price: 0
-    
-             },
-            { id: 2, name: "Base", price: 0
-    
-             }
+            { id: 1, name: "Lateral", price: 0 },
+            { id: 2, name: "Base", price: 0 }
         ],
         availableColors: ["Plateado", "Negro", "Azul", "Blanco"]
     },
@@ -244,15 +194,11 @@ const mockProducts = [
         category: "Accesorios",
         basePrice: 0,
         minOrder: 20,
-        image: "img/power-bank.jpg",
+        image: "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=300&h=300&fit=crop",
         description: "Cargador portátil de 10,000mAh con grabado láser personalizado",
         personalizationAreas: [
-            { id: 1, name: "Superficie principal", price: 0
-    
-             },
-            { id: 2, name: "Lateral", price: 0
-    
-             }
+            { id: 1, name: "Superficie principal", price: 0 },
+            { id: 2, name: "Lateral", price: 0 }
         ],
         availableColors: ["Negro", "Plata", "Azul", "Rojo"]
     },
@@ -262,15 +208,11 @@ const mockProducts = [
         category: "Accesorios",
         basePrice: 0,
         minOrder: 50,
-        image: "img/mousepad.jpg",
+        image: "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=300&h=300&fit=crop",
         description: "Mousepad con reposamuñecas y superficie antideslizante",
         personalizationAreas: [
-            { id: 1, name: "Superficie completa", price: 0
-    
-             },
-            { id: 2, name: "Esquina inferior", price: 0
-    
-             }
+            { id: 1, name: "Superficie completa", price: 0 },
+            { id: 2, name: "Esquina inferior", price: 0 }
         ],
         availableColors: ["Negro", "Azul", "Gris", "Verde"]
     },
@@ -280,15 +222,11 @@ const mockProducts = [
         category: "Accesorios",
         basePrice: 0,
         minOrder: 40,
-        image: "img/soporte-celular.jpg",
+        image: "https://images.unsplash.com/photo-1604671801908-6f0c6b4ac681?w=300&h=300&fit=crop",
         description: "Soporte ajustable de escritorio para smartphones y tablets",
         personalizationAreas: [
-            { id: 1, name: "Base frontal", price: 0
-    
-             },
-            { id: 2, name: "Brazo soporte", price: 0
-    
-             }
+            { id: 1, name: "Base frontal", price: 0 },
+            { id: 2, name: "Brazo soporte", price: 0 }
         ],
         availableColors: ["Negro", "Blanco", "Plata", "Azul"]
     },
@@ -300,18 +238,12 @@ const mockProducts = [
         category: "Textil",
         basePrice: 0,
         minOrder: 20,
-        image: "img/polo-empresarial.jpg",
+        image: "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=300&h=300&fit=crop",
         description: "Polo de algodón peinado, ideal para uniformes corporativos",
         personalizationAreas: [
-            { id: 1, name: "Pecho izquierdo", price: 0
-    
-             },
-            { id: 2, name: "Espalda", price: 0
-    
-             },
-            { id: 3, name: "Manga", price: 0
-    
-             }
+            { id: 1, name: "Pecho izquierdo", price: 0 },
+            { id: 2, name: "Espalda", price: 0 },
+            { id: 3, name: "Manga", price: 0 }
         ],
         availableColors: ["Blanco", "Azul marino", "Gris", "Negro", "Rojo"]
     },
@@ -321,18 +253,12 @@ const mockProducts = [
         category: "Textil",
         basePrice: 0,
         minOrder: 25,
-        image: "img/camiseta-basica.jpg",
+        image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop",
         description: "Camiseta 100% algodón, perfecta para eventos y promociones",
         personalizationAreas: [
-            { id: 1, name: "Frente", price: 0
-    
-             },
-            { id: 2, name: "Espalda completa", price: 0
-    
-             },
-            { id: 3, name: "Manga", price: 0
-    
-             }
+            { id: 1, name: "Frente", price: 0 },
+            { id: 2, name: "Espalda completa", price: 0 },
+            { id: 3, name: "Manga", price: 0 }
         ],
         availableColors: ["Blanco", "Negro", "Gris", "Azul", "Rojo", "Verde", "Amarillo"]
     },
@@ -342,21 +268,13 @@ const mockProducts = [
         category: "Textil",
         basePrice: 0,
         minOrder: 15,
-        image: "img/hoodie.jpg",
+        image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=300&h=300&fit=crop",
         description: "Sudadera con capucha, mezcla algodón-poliéster, bordado incluido",
         personalizationAreas: [
-            { id: 1, name: "Pecho", price: 0
-    
-             },
-            { id: 2, name: "Espalda grande", price: 0
-    
-             },
-            { id: 3, name: "Manga", price: 0
-    
-             },
-            { id: 4, name: "Capucha", price: 0
-    
-             }
+            { id: 1, name: "Pecho", price: 0 },
+            { id: 2, name: "Espalda grande", price: 0 },
+            { id: 3, name: "Manga", price: 0 },
+            { id: 4, name: "Capucha", price: 0 }
         ],
         availableColors: ["Gris melange", "Negro", "Azul marino", "Burdeos", "Verde militar"]
     },
@@ -366,18 +284,12 @@ const mockProducts = [
         category: "Textil",
         basePrice: 0,
         minOrder: 20,
-        image: "img/chaleco.jpg",
+        image: "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=300&h=300&fit=crop",
         description: "Chaleco polar con cierre, perfecto para equipos de trabajo",
         personalizationAreas: [
-            { id: 1, name: "Pecho derecho", price: 0
-    
-             },
-            { id: 2, name: "Espalda", price: 0
-    
-             },
-            { id: 3, name: "Manga", price: 0
-    
-             }
+            { id: 1, name: "Pecho derecho", price: 0 },
+            { id: 2, name: "Espalda", price: 0 },
+            { id: 3, name: "Manga", price: 0 }
         ],
         availableColors: ["Azul marino", "Negro", "Gris", "Verde", "Rojo"]
     },
@@ -387,18 +299,12 @@ const mockProducts = [
         category: "Textil",
         basePrice: 0,
         minOrder: 50,
-        image: "img/gorra.jpg",
+        image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=300&h=300&fit=crop",
         description: "Gorra de 6 paneles con cierre ajustable y bordado frontal",
         personalizationAreas: [
-            { id: 1, name: "Frente", price: 0
-    
-             },
-            { id: 2, name: "Lateral", price: 0
-    
-             },
-            { id: 3, name: "Visera", price: 0
-    
-             }
+            { id: 1, name: "Frente", price: 0 },
+            { id: 2, name: "Lateral", price: 0 },
+            { id: 3, name: "Visera", price: 0 }
         ],
         availableColors: ["Negro", "Azul marino", "Blanco", "Gris", "Rojo", "Verde"]
     },
@@ -410,15 +316,11 @@ const mockProducts = [
         category: "Tecnología",
         basePrice: 0,
         minOrder: 50,
-        image: "img/memoria-usb.jpg",
+        image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=300&h=300&fit=crop",
         description: "USB 3.0 de 16GB con carcasa metálica y grabado láser",
         personalizationAreas: [
-            { id: 1, name: "Superficie principal", price: 0
-    
-             },
-            { id: 2, name: "Tapa", price: 0
-    
-             }
+            { id: 1, name: "Superficie principal", price: 0 },
+            { id: 2, name: "Tapa", price: 0 }
         ],
         availableColors: ["Plateado", "Dorado", "Negro", "Azul"]
     },
@@ -428,15 +330,11 @@ const mockProducts = [
         category: "Tecnología",
         basePrice: 0,
         minOrder: 20,
-        image: "img/auriculares.jpg",
+        image: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop",
         description: "Auriculares Bluetooth con estuche de carga personalizado",
         personalizationAreas: [
-            { id: 1, name: "Estuche", price: 0
-    
-             },
-            { id: 2, name: "Auriculares", price: 0
-    
-             }
+            { id: 1, name: "Estuche", price: 0 },
+            { id: 2, name: "Auriculares", price: 0 }
         ],
         availableColors: ["Negro", "Blanco", "Azul", "Gris"]
     },
@@ -446,15 +344,11 @@ const mockProducts = [
         category: "Tecnología",
         basePrice: 0,
         minOrder: 100,
-        image: "img/cable-usb.jpg",
+        image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=300&h=300&fit=crop",
         description: "Cable USB-C/Lightning de 1m con logo impreso en cable",
         personalizationAreas: [
-            { id: 1, name: "Cable", price: 0
-    
-             },
-            { id: 2, name: "Conectores", price: 0
-    
-             }
+            { id: 1, name: "Cable", price: 0 },
+            { id: 2, name: "Conectores", price: 0 }
         ],
         availableColors: ["Negro", "Blanco", "Azul", "Rojo"]
     },
@@ -466,15 +360,11 @@ const mockProducts = [
         category: "Hogar",
         basePrice: 0,
         minOrder: 25,
-        image: "img/mate-set.jpg",
+        image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=300&h=300&fit=crop",
         description: "Mate de calabaza con bombilla de acero y grabado personalizado",
         personalizationAreas: [
-            { id: 1, name: "Mate", price: 0
-    
-             },
-            { id: 2, name: "Bombilla", price: 0
-    
-             }
+            { id: 1, name: "Mate", price: 0 },
+            { id: 2, name: "Bombilla", price: 0 }
         ],
         availableColors: ["Natural", "Barnizado", "Pintado negro"]
     },
@@ -484,15 +374,11 @@ const mockProducts = [
         category: "Hogar",
         basePrice: 0,
         minOrder: 30,
-        image: "img/tabla-bambu.jpg",
+        image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=300&h=300&fit=crop",
         description: "Tabla de corte ecológica de bambú con grabado láser",
         personalizationAreas: [
-            { id: 1, name: "Centro", price: 0
-    
-             },
-            { id: 2, name: "Esquina", price: 0
-    
-             }
+            { id: 1, name: "Centro", price: 0 },
+            { id: 2, name: "Esquina", price: 0 }
         ],
         availableColors: ["Natural", "Carbonizado"]
     },
@@ -502,15 +388,11 @@ const mockProducts = [
         category: "Hogar",
         basePrice: 0,
         minOrder: 20,
-        image: "img/termo-acero.jpg",
+        image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=300&h=300&fit=crop",
         description: "Termo de 1L con doble aislamiento y grabado láser",
         personalizationAreas: [
-            { id: 1, name: "Cuerpo principal", price: 0
-    
-             },
-            { id: 2, name: "Tapa", price: 0
-    
-             }
+            { id: 1, name: "Cuerpo principal", price: 0 },
+            { id: 2, name: "Tapa", price: 0 }
         ],
         availableColors: ["Acero natural", "Negro mate", "Azul", "Rojo"]
     },
@@ -522,15 +404,11 @@ const mockProducts = [
         category: "Promocionales",
         basePrice: 0,
         minOrder: 100,
-        image: "img/bolsa-ecologica.jpg",
+        image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=300&fit=crop",
         description: "Bolsa reutilizable de algodón con asas reforzadas",
         personalizationAreas: [
-            { id: 1, name: "Frente", price: 0
-    
-             },
-            { id: 2, name: "Ambos lados", price: 0
-    
-             }
+            { id: 1, name: "Frente", price: 0 },
+            { id: 2, name: "Ambos lados", price: 0 }
         ],
         availableColors: ["Natural", "Negro", "Azul", "Rojo", "Verde"]
     },
@@ -540,15 +418,11 @@ const mockProducts = [
         category: "Promocionales",
         basePrice: 0,
         minOrder: 50,
-        image: "img/paraguas.jpg",
+        image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=300&fit=crop",
         description: "Paraguas automático con logo impreso en gajos",
         personalizationAreas: [
-            { id: 1, name: "Un gajo", price: 0
-    
-             },
-            { id: 2, name: "Varios gajos", price: 0
-    
-             }
+            { id: 1, name: "Un gajo", price: 0 },
+            { id: 2, name: "Varios gajos", price: 0 }
         ],
         availableColors: ["Negro", "Azul marino", "Rojo", "Verde", "Gris"]
     },
@@ -558,19 +432,17 @@ const mockProducts = [
         category: "Promocionales",
         basePrice: 0,
         minOrder: 500,
-        image: "img/iman-publicitario.jpg",
+        image: "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=300&h=300&fit=crop",
         description: "Imán de refrigerador con impresión full color personalizada",
         personalizationAreas: [
-            { id: 1, name: "Superficie completa", price: 0
-    
-             }
+            { id: 1, name: "Superficie completa", price: 0 }
         ],
         availableColors: ["Impresión full color"]
     }
 ];
 
 // Categorías de productos con contadores automáticos
-const mockCategories = [
+export const mockCategories = [
     { id: 1, name: "Todos", count: mockProducts.length },
     { id: 2, name: "Tazas", count: mockProducts.filter(p => p.category === "Tazas").length },
     { id: 3, name: "Útiles", count: mockProducts.filter(p => p.category === "Útiles").length },
@@ -583,7 +455,7 @@ const mockCategories = [
 ];
 
 // Testimonios de clientes
-const mockTestimonials = [
+export const mockTestimonials = [
     {
         id: 1,
         company: "Tech Solutions S.A.",
@@ -627,7 +499,7 @@ const mockTestimonials = [
 ];
 
 // Opciones de personalización disponibles
-const mockPersonalizationOptions = {
+export const mockPersonalizationOptions = {
     // Posiciones disponibles para el logo
     logoPositions: [
         { id: 1, name: "Centrado", description: "Logo en el centro del producto" },
@@ -639,18 +511,10 @@ const mockPersonalizationOptions = {
     ],
     // Tamaños de logo con precios
     logoSizes: [
-        { id: 1, name: "Pequeño", size: "2x2cm", price: 0
-
-         },
-        { id: 2, name: "Mediano", size: "4x4cm", price: 0
-
-         },
-        { id: 3, name: "Grande", size: "6x6cm", price: 0
-
-         },
-        { id: 4, name: "Extra Grande", size: "8x8cm", price: 0
-
-         }
+        { id: 1, name: "Pequeño", size: "2x2cm", price: 0 },
+        { id: 2, name: "Mediano", size: "4x4cm", price: 0 },
+        { id: 3, name: "Grande", size: "6x6cm", price: 0 },
+        { id: 4, name: "Extra Grande", size: "8x8cm", price: 0 }
     ],
     // Métodos de impresión disponibles
     printingMethods: [

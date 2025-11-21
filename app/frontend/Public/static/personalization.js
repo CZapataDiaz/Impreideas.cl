@@ -689,11 +689,7 @@ class PersonalizationSystem {
             
             // Mostrar confirmación
             setTimeout(() => {
-                alert(`¡Producto personalizado agregado al carrito!\
-\
-Producto: ${this.currentProduct.name}\
-Cantidad: ${this.selectedOptions.quantity} unidades\
-Personalización aplicada correctamente.`);
+                alert(`¡Producto personalizado agregado al carrito!\n\nProducto: ${this.currentProduct.name}\nCantidad: ${this.selectedOptions.quantity} unidades\nPersonalización aplicada correctamente.`);
             }, 500);
         }
     }

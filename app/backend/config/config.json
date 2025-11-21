@@ -1,0 +1,27 @@
+{
+  "development": {
+    "username": "Cristobal",
+    "password": "Impreideas1234",
+    "database": "Impreideas",
+    "host": "localhost",
+    "port": 5432,
+    "dialect": "postgres",
+    "logging": false
+  },
+  "test": {
+    "username": "Cristobal",
+    "password": "Impreideas1234", 
+    "database": "Impreideas_test",
+    "host": "localhost",
+    "port": 5432,
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "Cristobal",
+    "password": "Impreideas1234",
+    "database": "Impreideas_production",
+    "host": "localhost",
+    "port": 5432,
+    "dialect": "postgres"
+  }
+}

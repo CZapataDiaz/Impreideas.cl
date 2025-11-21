@@ -438,11 +438,7 @@ class ShoppingCart {
         const success = this.simulateQuoteSending();
         
         if (success) {
-            alert(`¡Cotización enviada exitosamente!\
-\
-${quoteDetails}\
-\
-En ImpreIdeas nos comunicaremos contigo en las próximas 24 horas para confirmar los detalles y enviar la cotización final.`);
+            alert(`¡Cotización enviada exitosamente!\n\n${quoteDetails}\n\nEn ImpreIdeas nos comunicaremos contigo en las próximas 24 horas para confirmar los detalles y enviar la cotización final.`);
             
             // Limpiar carrito después del envío exitoso
             this.clearCart();
@@ -455,22 +451,13 @@ En ImpreIdeas nos comunicaremos contigo en las próximas 24 horas para confirmar
     // Generar texto detallado de la cotización
     generateQuoteText() {
         const summary = this.getOrderSummary();
-        let quoteText = `SOLICITUD DE COTIZACIÓN - IMPREIDEAS\
-`;
-        quoteText += `==========================================\
-\
-`;
-        quoteText += `Total de productos: ${summary.totalItems} unidades\
-`;
-        quoteText += `Categorías: ${summary.categories.join(', ')}\
-`;
-        quoteText += `Precio estimado: $${summary.totalPrice.toLocaleString('es-CL')} CLP\
-\
-`;
-        quoteText += `DETALLE DE PRODUCTOS:\
-`;
-        quoteText += `---------------------\
-`;
+        let quoteText = `SOLICITUD DE COTIZACIÓN - IMPREIDEAS\n`;
+        quoteText += `==========================================\n\n`;
+        quoteText += `Total de productos: ${summary.totalItems} unidades\n`;
+        quoteText += `Categorías: ${summary.categories.join(', ')}\n`;
+        quoteText += `Precio estimado: $${summary.totalPrice.toLocaleString('es-CL')} CLP\n\n`;
+        quoteText += `DETALLE DE PRODUCTOS:\n`;
+        quoteText += `---------------------\n`;
         
         this.items.forEach((item, index) => {
             const basePrice = parseFloat(item.product.basePrice) || 0;
@@ -485,23 +472,17 @@ En ImpreIdeas nos comunicaremos contigo en las próximas 24 horas para confirmar
             const unitPrice = basePrice + personalizationPrice;
             const totalPrice = unitPrice * item.quantity;
             
-            quoteText += `\
-${index + 1}. ${item.product.name}\
-`;
-            quoteText += `   Cantidad: ${item.quantity} unidades\
-`;
-            quoteText += `   Precio unitario: $${unitPrice.toLocaleString('es-CL')} CLP\
-`;
-            quoteText += `   Total: $${totalPrice.toLocaleString('es-CL')} CLP\
-`;
+            quoteText += `\n${index + 1}. ${item.product.name}\n`;
+            quoteText += `   Cantidad: ${item.quantity} unidades\n`;
+            quoteText += `   Precio unitario: $${unitPrice.toLocaleString('es-CL')} CLP\n`;
+            quoteText += `   Total: $${totalPrice.toLocaleString('es-CL')} CLP\n`;
             
             if (item.personalization.area) {
                 quoteText += `   Personalización: ${item.personalization.area}`;
                 if (item.personalization.color) {
                     quoteText += ` - Color: ${item.personalization.color}`;
                 }
-                quoteText += `\
-`;
+                quoteText += `\n`;
             }
         });
         
@@ -510,7 +491,8 @@ ${index + 1}. ${item.product.name}\
 
     // Simular envío de cotización (en producción sería una llamada real al servidor)
     simulateQuoteSending() {
-        // Aquí normalmente harías una llamada HTTP al backend
+        // Aquí normalmente harías una llamada HTTP a tu backend
+        // Por ahora simulamos un envío exitoso con 90% de probabilidad
         return Math.random() > 0.1;
     }
 }
