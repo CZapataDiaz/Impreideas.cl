@@ -64,13 +64,6 @@ const HeroSection = () => {
                                 Ver Catálogo
                                 <ArrowRight className="ml-2 w-5 h-5" />
                             </button>
-                            
-                            <button 
-                                onClick={handleQuoteRequest}
-                                className="inline-flex items-center justify-center border-2 border-sky-600 text-sky-600 hover:bg-sky-50 dark:hover:bg-sky-900/20 px-8 py-6 text-lg font-semibold rounded-lg transition-all duration-300"
-                            >
-                                Solicitar Cotización
-                            </button>
                         </div>
 
                         {/* Features */}
@@ -109,7 +102,6 @@ const HeroSection = () => {
                                         className="w-full h-32 object-cover rounded-lg mb-4"
                                     />
                                     <h3 className="font-semibold text-gray-800 dark:text-white">Tazas Personalizadas</h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-300">Desde $0000 CLP c/u</p>
                                 </div>
                                 
                                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg transform -rotate-2 hover:-rotate-3 transition-transform duration-300 border dark:border-gray-700">
@@ -119,7 +111,6 @@ const HeroSection = () => {
                                         className="w-full h-32 object-cover rounded-lg mb-4"
                                     />
                                     <h3 className="font-semibold text-gray-800 dark:text-white">Lapiceras Premium</h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-300">Desde $0000 CLP c/u</p>
                                 </div>
                             </div>
                             
@@ -131,7 +122,6 @@ const HeroSection = () => {
                                         className="w-full h-32 object-cover rounded-lg mb-4"
                                     />
                                     <h3 className="font-semibold text-gray-800 dark:text-white">Textil Corporativo</h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-300">Desde $0000 CLP c/u</p>
                                 </div>
                                 
                                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg transform -rotate-1 hover:rotate-0 transition-transform duration-300 border dark:border-gray-700">
@@ -141,14 +131,12 @@ const HeroSection = () => {
                                         className="w-full h-32 object-cover rounded-lg mb-4"
                                     />
                                     <h3 className="font-semibold text-gray-800 dark:text-white">Accesorios</h3>
-                                    <p className="text-sm text-gray-600 dark:text-gray-300">Desde $0000 CLP c/u</p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Decorative elements */}
                         <div className="absolute -top-4 -right-4 w-24 h-24 bg-sky-200 dark:bg-sky-800 rounded-full opacity-20 animate-pulse"></div>
-                        <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-sky-300 dark:bg-sky-700 rounded-full opacity-10 animate-pulse delay-700"></div>
                     </div>
                 </div>
 

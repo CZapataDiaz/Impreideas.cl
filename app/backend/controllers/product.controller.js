@@ -394,7 +394,7 @@ class ProductController {
 
             // Calcular totales
             const subtotal = unitPrice * quantity;
-            const taxRate = 0.19; // IVA 19% Chile
+            const taxRate = 0.0; // IVA 19% Chile
             const taxAmount = subtotal * taxRate;
             const totalPrice = subtotal + taxAmount;
 

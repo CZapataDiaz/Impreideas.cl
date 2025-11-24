@@ -310,9 +310,6 @@ const ProductCatalog = ({ searchQuery }) => {
                     <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
                         Catálogo de Productos
                     </h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                        Descubre nuestra amplia selección de productos promocionales e ideas corporativas personalizadas
-                    </p>
                 </div>
 
                 {/* Filtros */}
