@@ -107,11 +107,6 @@ const QuoteModal = ({ onClose }) => {
             setIsSubmitted(true);
             setIsSubmitting(false);
             
-            // Limpiar carrito después del éxito
-            setTimeout(() => {
-                clearCart();
-            }, 2000);
-
         } catch (error) {
             console.log('❌ Error al enviar cotización:', error);
             setIsSubmitting(false);
@@ -414,17 +409,6 @@ const QuoteModal = ({ onClose }) => {
                                 Tu solicitud de cotización ha sido enviada exitosamente. 
                                 Nos contactaremos contigo en las próximas 24-48 horas.
                             </p>
-                        </div>
-
-                        <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 mb-6">
-                            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Resumen de tu solicitud:</h3>
-                            <div className="text-left space-y-2">
-                                <p><span className="font-medium">Empresa:</span> {formData.companyName}</p>
-                                <p><span className="font-medium">Contacto:</span> {formData.contactName}</p>
-                                <p><span className="font-medium">Email:</span> {formData.email}</p>
-                                <p><span className="font-medium">Productos:</span> {items.length} productos diferentes</p>
-                                <p><span className="font-medium">Total estimado:</span> ${total.toLocaleString('es-CL')} CLP</p>
-                            </div>
                         </div>
 
                         <button

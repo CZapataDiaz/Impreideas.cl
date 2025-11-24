@@ -1,5 +1,6 @@
 const { Quote, QuoteItem, Product, Category, User, Cart, CartItem } = require('../models');
 const { Op } = require('sequelize');
+const mailchimpService = require("../services/mailchimp.service");
 
 /**
  * Controlador de cotizaciones para ImpreIdeas
@@ -150,9 +151,8 @@ class QuoteController {
             }
 
             console.log('💰 [createQuote] Totales calculados:', { subtotal, production });
-            console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA", processedItems);
             // Calcular impuestos (IVA 19% en Chile)
-            const taxRate = 0.19;
+            const taxRate = 0.0;
             const taxAmount = subtotal * taxRate;
             const totalAmount = subtotal + taxAmount;
 
@@ -236,9 +236,21 @@ class QuoteController {
                 }
             }
 
-            console.log('🎯 [createQuote] Enviando respuesta exitosa...');
 
             // ✅ RESPONDER EXITOSAMENTE
+            try {
+                const quoteItems = await QuoteItem.findAll({
+                    where: { quoteId: quote.id },
+                    raw: true
+                });
+                
+                await mailchimpService.sendClientQuoteEmail(quote.dataValues, quoteItems);
+                await mailchimpService.sendBusinessNotificationEmail(quote.dataValues, quoteItems);
+                
+                console.log("📧Correos enviados correctamente");
+            } catch (err) {
+                console.error("❌Error enviando emails:", err);
+            }
             return res.status(201).json({
                 success: true,
                 message: 'Cotización creada exitosamente',

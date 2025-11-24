@@ -30,7 +30,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
                         <div className="flex items-center space-x-6">
                             <div className="flex items-center space-x-2">
                                 <Phone className="w-4 h-4 text-sky-600" />
-                                <span>+59 9 9078 6018</span>
+                                <span>+56 9 9078 6018</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Mail className="w-4 h-4 text-sky-600" />
@@ -76,19 +76,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden md:flex items-center space-x-6">
-                        <button 
-                            onClick={() => scrollToSection('catalog')}
-                            className="text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 font-medium transition-colors"
-                        >
-                            Catálogo
-                        </button>
-
-                        <button 
-                            onClick={() => scrollToSection('about')}
-                            className="text-gray-700 dark:text-gray-300 hover:text-sky-600 dark:hover:text-sky-400 font-medium transition-colors"
-                        >
-                            Nosotros
-                        </button>
+                        
 
                         
                         {/* Theme Toggle */}

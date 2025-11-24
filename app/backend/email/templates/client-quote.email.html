@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Confirmación de cotización - ImpreIdeas</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f9fafb;
+            margin: 0;
+            padding: 20px;
+            color: #1f2937;
+        }
+
+        .container {
+            max-width: 620px;
+            margin: auto;
+            background: #ffffff;
+            border-radius: 0.5rem;
+            padding: 0;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+            color: white;
+            padding: 32px 24px;
+            text-align: center;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .header .subtitle {
+            margin: 8px 0 0 0;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 32px 24px;
+        }
+
+        .quote-number {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 12px 16px;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            margin: 20px 0;
+            border-left: 4px solid #0ea5e9;
+        }
+
+        .welcome-message {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #374151;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            margin-top: 32px;
+            margin-bottom: 16px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #111827;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #0ea5e9;
+        }
+
+        .client-info {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .info-item {
+            margin-bottom: 8px;
+        }
+
+        .info-label {
+            font-weight: 600;
+            color: #374151;
+            font-size: 14px;
+        }
+
+        .info-value {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .product-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 20px;
+            margin-bottom: 16px;
+            transition: all 0.2s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-color: #0ea5e9;
+        }
+
+        .product-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #111827;
+            margin: 0 0 12px 0;
+        }
+
+        .product-details {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        .personalization {
+            background: #f0f9ff;
+            padding: 16px;
+            border-radius: 0.5rem;
+            margin-top: 12px;
+            border-left: 3px solid #0ea5e9;
+        }
+
+        .personalization-title {
+            font-weight: 600;
+            color: #0369a1;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .personalization-list {
+            margin: 0;
+            padding-left: 16px;
+        }
+
+        .personalization-list li {
+            margin-bottom: 4px;
+            color: #475569;
+        }
+
+        .totals {
+            background: #f8fafc;
+            padding: 24px;
+            border-radius: 0.5rem;
+            border: 1px solid #e5e7eb;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .total-row:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 18px;
+            color: #111827;
+        }
+
+        .notes {
+            background: #fef3c7;
+            padding: 20px;
+            border-radius: 0.5rem;
+            border-left: 4px solid #f59e0b;
+            margin-top: 20px;
+        }
+
+        .next-steps {
+            background: #f0fdf4;
+            padding: 20px;
+            border-radius: 0.5rem;
+            border-left: 4px solid #10b981;
+            margin-top: 24px;
+        }
+
+        .footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 32px 24px;
+            text-align: center;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .footer a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .company-name {
+            color: #0ea5e9;
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .product-details {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .content {
+                padding: 24px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header con gradiente azul -->
+        <div class="header">
+            <h1>ImpreIdeas</h1>
+            <p class="subtitle">¡Gracias por tu solicitud de cotización!</p>
+        </div>
+
+        <div class="content">
+            <!-- Número de cotización -->
+            <div class="quote-number">
+                Número de cotización: <strong>{{quoteNumber}}</strong>
+            </div>
+
+            <!-- Mensaje de bienvenida -->
+            <div class="welcome-message">
+                <p>Hola <strong>{{contactName}}</strong>, hemos recibido tu solicitud y comenzaremos a trabajar en ella cuanto antes. Te mantendremos informado sobre el progreso.</p>
+            </div>
+
+            <!-- Información del cliente -->
+            <p class="section-title">Información del cliente</p>
+            <div class="client-info">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Empresa</div>
+                        <div class="info-value">{{companyName}}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">{{email}}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Teléfono</div>
+                        <div class="info-value">{{phone}}</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">RUT</div>
+                        <div class="info-value">{{rut}}</div>
+                    </div>
+                    <div class="info-item" style="grid-column: 1 / -1;">
+                        <div class="info-label">Dirección</div>
+                        <div class="info-value">{{address}}, {{city}}</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productos solicitados -->
+            <p class="section-title">Productos solicitados</p>
+
+            {{#each items}}
+            <div class="product-card">
+                <h3 class="product-name">{{productName}}</h3>
+                <div class="product-details">
+                    <span><strong>Cantidad:</strong> {{quantity}}</span>
+                    <span><strong>Subtotal:</strong> ${{subtotal}}</span>
+                </div>
+                {{#if personalization}}
+                <div class="personalization">
+                    <div class="personalization-title">Personalización:</div>
+                    <ul class="personalization-list">
+                        {{#each personalization}}
+                        <li><strong>{{@key}}:</strong> {{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+                {{/if}}
+            </div>
+            {{/each}}
+
+            <!-- Totales -->
+            <p class="section-title">Resumen de valores</p>
+            <div class="totals">
+                <div class="total-row">
+                    <span>Subtotal:</span>
+                    <span>${{subtotal}}</span>
+                </div>
+                <div class="total-row">
+                    <span>Total:</span>
+                    <span>${{total}}</span>
+                </div>
+            </div>
+
+            {{#if notes}}
+            <div class="notes">
+                <strong>Notas adicionales:</strong>
+                <p style="margin: 8px 0 0 0; color: #92400e;">{{notes}}</p>
+            </div>
+            {{/if}}
+
+            <!-- Próximos pasos -->
+            <div class="next-steps">
+                <strong>¿Qué sigue?</strong>
+                <p style="margin: 8px 0 0 0; color: #065f46;">Nos pondremos en contacto contigo si necesitamos más información o cuando tu cotización esté lista para revisión.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="company-name">ImpreIdeas</div>
+            <div>Soluciones creativas en impresión y diseño</div>
+            <div style="margin-top: 16px;">
+                © {{year}} ImpreIdeas — Todos los derechos reservados<br>
+                <small>Este es un correo automático, por favor no responder</small>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
