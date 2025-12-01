@@ -36,12 +36,12 @@ function cartReducer(state, action) {
             } else {
                 // Nuevo item
                 const newItem = {
-                    id: Date.now(), // ID único para el item del carrito
+                    id: Date.now(), 
                     productId: product.id,
-                    product: { // Guardamos toda la información del producto
+                    product: { 
                         id: product.id,
                         name: product.name,
-                        image: product.image, // Guardamos la imagen
+                        image: product.image,
                         basePrice: basePrice,
                         minOrder: product.minimum_order || product.minOrder || 1,
                         description: product.description,
@@ -190,6 +190,15 @@ export const CartProvider = ({ children }) => {
     // Función principal para agregar items al carrito
     const addItem = (product, quantity, personalization = {}) => {
         console.log('🛒 addItem llamado con:', { product, quantity, personalization });
+
+        // ✅ AGREGAR ESTO PARA DEBUG:
+            console.log('🎯 DEBUG - PERSONALIZATION EN CART CONTEXT:');
+            console.log('Tipo:', typeof personalization);
+            console.log('Valor completo:', JSON.stringify(personalization, null, 2));
+            console.log('Tiene additionalNotes:', personalization?.additionalNotes);
+            console.log('Tiene position:', personalization?.position);
+            console.log('Tiene size:', personalization?.size);
+            console.log('Tiene method:', personalization?.method);
         
         if (!product || !product.id) {
             console.error('❌ Producto inválido:', product);

@@ -47,6 +47,18 @@ const QuoteModal = ({ onClose }) => {
             console.log('🔍 Email del formulario:', formData.email);
             console.log('🔍 Tipo de email:', typeof formData.email);
             console.log('🔍 Email vacío?:', !formData.email);
+
+            console.log('🎯 DEBUG - ITEMS DEL CARRITO EN QUOTEMODAL:');
+            items.forEach((item, index) => {
+                console.log(`📦 Carrito Item ${index}:`, {
+                    productName: item.product?.name,
+                    personalization: item.personalization,
+                    hasAdditionalNotes: !!item.personalization?.additionalNotes,
+                    hasPosition: !!item.personalization?.position,
+                    hasSize: !!item.personalization?.size,
+                    hasMethod: !!item.personalization?.method
+                });
+            });
             
             // Formatear los datos según lo que espera el backend
             // Usar campos individuales en lugar de contactInfo
@@ -69,7 +81,7 @@ const QuoteModal = ({ onClose }) => {
                 }))
             };
 
-            console.log('📤 Datos FINALES que se envían:', JSON.stringify(quoteData, null, 2));
+            console.log('📤 Datos FINALES que se envían:', JSON.stringify(quoteData));
             console.log('📤 Email en quoteData:', quoteData.email);
 
             const response = await fetch(`${API_URL}/api/quotes`, {
@@ -294,7 +306,7 @@ const QuoteModal = ({ onClose }) => {
                                     </div>
 
                                     <div>
-                                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                                        {/*<label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                                             Comentarios Adicionales
                                         </label>
                                         <textarea
@@ -304,7 +316,7 @@ const QuoteModal = ({ onClose }) => {
                                             rows="4"
                                             className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:border-sky-500 focus:ring-2 focus:ring-sky-500 focus:ring-opacity-20 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
                                             placeholder="Información adicional sobre tu pedido, fechas específicas, requerimientos especiales, etc."
-                                        />
+                                        />*/}
                                     </div>
                                 </div>
 

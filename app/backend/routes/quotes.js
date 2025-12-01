@@ -16,7 +16,6 @@ const {
  */
 router.post('/',
     optionalAuth,
-    validateQuoteCreation,
     quoteController.createQuote
 );
 

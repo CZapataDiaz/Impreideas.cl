@@ -13,7 +13,7 @@ class QuoteController {
      */
     async createQuote(req, res) {
         console.log('🚀 [createQuote] INICIANDO VERSIÓN CORREGIDA...');
-        console.log (req.body);
+        console.log (req.body.items);
         try {
             const {
                 companyName,
@@ -47,6 +47,12 @@ class QuoteController {
             }
 
             console.log('🔍 [createQuote] Items recibidos:', JSON.stringify(items, null, 2));
+
+            console.log('🎯 DEBUG - PERSONALIZATION QUE LLEGA AL BACKEND:');
+            items.forEach((item, index) => {
+                console.log(`📦 Item ${index} personalization:`, JSON.stringify(item.personalization, null, 2));
+                console.log(`📦 Item ${index} tiene additionalNotes:`, item.personalization?.additionalNotes);
+            });
 
             // Para cotizaciones anónimas, validar campos requeridos
             if (!user) {
@@ -244,13 +250,25 @@ class QuoteController {
                     raw: true
                 });
                 
-                await mailchimpService.sendClientQuoteEmail(quote.dataValues, quoteItems);
-                await mailchimpService.sendBusinessNotificationEmail(quote.dataValues, quoteItems);
+                // ✅ FIX: Procesar personalization si es string
+                const processedItems = quoteItems.map(item => ({
+                    ...item,
+                    personalization: typeof item.personalization === 'string' 
+                    ? JSON.parse(item.personalization) 
+                    : item.personalization
+                }));
+                
+                console.log("🔍 Items procesados para email:", JSON.stringify(processedItems, null, 2));
+                
+                await mailchimpService.sendClientQuoteEmail(quote.dataValues, processedItems);
+                await mailchimpService.sendBusinessNotificationEmail(quote.dataValues, processedItems);
                 
                 console.log("📧Correos enviados correctamente");
             } catch (err) {
                 console.error("❌Error enviando emails:", err);
             }
+
+
             return res.status(201).json({
                 success: true,
                 message: 'Cotización creada exitosamente',

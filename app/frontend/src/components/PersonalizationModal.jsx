@@ -119,7 +119,7 @@ const PersonalizationModal = ({ product, onClose, personalizationOptions }) => {
         setTotalPrice(total);
     }, [product?.basePrice, selectedSize?.priceModifier, quantity]);
 
-    const handleFileUpload = (e) => {
+    /*const handleFileUpload = (e) => {
         const file = e.target.files[0];
         if (file) {
             const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/svg+xml', 'application/pdf'];
@@ -136,12 +136,12 @@ const PersonalizationModal = ({ product, onClose, personalizationOptions }) => {
             }
 
             setLogoFile(file);
-        }
-    };
+        
+    }*/
     
 // Agregar al carrito con personalización
 const handleAddToCart = () => {
-    if (logoType === 'file' && !logoFile) {
+    /*if (logoType === 'file' && !logoFile) {
         alert('Por favor selecciona un archivo de logo.');
         return;
     }
@@ -149,7 +149,7 @@ const handleAddToCart = () => {
     if (logoType === 'text' && !logoText.trim()) {
         alert('Por favor ingresa el texto para el logo.');
         return;
-    }
+    }*/
 
     // Crear objeto de personalización con estructura de BD
     const personalization = {
@@ -157,14 +157,6 @@ const handleAddToCart = () => {
         position: selectedPosition?.name,
         size: selectedSize?.name,
         method: selectedMethod?.name,
-        logo: logoType === 'file' ? {
-            type: 'file',
-            name: logoFile.name,
-            size: logoFile.size
-        } : {
-            type: 'text',
-            content: logoText
-        },
         additionalNotes,
         priceModifiers: {
             size: selectedSize?.priceModifier || 0,
@@ -373,7 +365,7 @@ const handleAddToCart = () => {
 
                             {/* Notas adicionales */}
                             <div>
-                                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Notas Adicionales (Opcional)</h3>
+                                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">Eleccion de colores</h3>
                                 <textarea
                                     value={additionalNotes}
                                     onChange={(e) => setAdditionalNotes(e.target.value)}

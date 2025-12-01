@@ -128,6 +128,7 @@
             gap: 20px;
             font-size: 14px;
             color: #6b7280;
+            margin-bottom: 12px;
         }
 
         .personalization {
@@ -141,18 +142,59 @@
         .personalization-title {
             font-weight: 600;
             color: #0369a1;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .personalization-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .personalization-item {
+            margin-bottom: 8px;
+        }
+
+        .personalization-label {
+            font-weight: 600;
+            color: #374151;
+            font-size: 14px;
+        }
+
+        .personalization-value {
+            color: #475569;
+            font-size: 14px;
+        }
+
+        .price-modifiers {
+            background: #fef3c7;
+            padding: 12px;
+            border-radius: 0.5rem;
+            margin-top: 12px;
+            border-left: 3px solid #f59e0b;
+        }
+
+        .price-modifiers-title {
+            font-weight: 600;
+            color: #92400e;
             margin-bottom: 8px;
             font-size: 14px;
         }
 
-        .personalization-list {
-            margin: 0;
-            padding-left: 16px;
+        .additional-notes {
+            background: #f0fdf4;
+            padding: 14px;
+            border-radius: 0.5rem;
+            margin-top: 12px;
+            border-left: 3px solid #10b981;
         }
 
-        .personalization-list li {
-            margin-bottom: 4px;
-            color: #475569;
+        .additional-notes-title {
+            font-weight: 600;
+            color: #065f46;
+            margin-bottom: 8px;
+            font-size: 14px;
         }
 
         .totals {
@@ -220,6 +262,10 @@
 
         @media (max-width: 600px) {
             .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .personalization-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -291,14 +337,64 @@
                     <span><strong>Cantidad:</strong> {{quantity}}</span>
                     <span><strong>Subtotal:</strong> ${{subtotal}}</span>
                 </div>
+                
                 {{#if personalization}}
                 <div class="personalization">
-                    <div class="personalization-title">Personalización:</div>
-                    <ul class="personalization-list">
-                        {{#each personalization}}
-                        <li><strong>{{@key}}:</strong> {{this}}</li>
-                        {{/each}}
-                    </ul>
+                    <div class="personalization-title">🎨 Personalización del Producto</div>
+                    <div class="personalization-grid">
+                        {{#if personalization.color}}
+                        <div class="personalization-item">
+                            <div class="personalization-label">Color:</div>
+                            <div class="personalization-value">{{personalization.color}}</div>
+                        </div>
+                        {{/if}}
+                        
+                        {{#if personalization.position}}
+                        <div class="personalization-item">
+                            <div class="personalization-label">Posición del Logo:</div>
+                            <div class="personalization-value">{{personalization.position}}</div>
+                        </div>
+                        {{/if}}
+                        
+                        {{#if personalization.size}}
+                        <div class="personalization-item">
+                            <div class="personalization-label">Tamaño del Logo:</div>
+                            <div class="personalization-value">{{personalization.size}}</div>
+                        </div>
+                        {{/if}}
+                        
+                        {{#if personalization.method}}
+                        <div class="personalization-item">
+                            <div class="personalization-label">Método de Impresión:</div>
+                            <div class="personalization-value">{{personalization.method}}</div>
+                        </div>
+                        {{/if}}
+                    </div>
+
+                    {{#if personalization.priceModifiers}}
+                    <div class="price-modifiers">
+                        <div class="price-modifiers-title">💰 Modificadores de Precio</div>
+                        {{#if personalization.priceModifiers.size}}
+                        <div class="personalization-item">
+                            <div class="personalization-label">Tamaño del logo:</div>
+                            <div class="personalization-value">+${{personalization.priceModifiers.size}}</div>
+                        </div>
+                        {{/if}}
+                        {{#if personalization.priceModifiers.method}}
+                        <div class="personalization-item">
+                            <div class="personalization-label">Método de impresión:</div>
+                            <div class="personalization-value">+${{personalization.priceModifiers.method}}</div>
+                        </div>
+                        {{/if}}
+                    </div>
+                    {{/if}}
+                </div>
+                {{/if}}
+                
+                {{#if personalization.additionalNotes}}
+                <div class="additional-notes">
+                    <div class="additional-notes-title">📝 Notas adicionales:</div>
+                    <p style="margin: 0; color: #065f46; font-size: 14px; line-height: 1.5;">{{personalization.additionalNotes}}</p>
                 </div>
                 {{/if}}
             </div>
@@ -319,7 +415,7 @@
 
             {{#if notes}}
             <div class="notes">
-                <strong>Notas adicionales:</strong>
+                <strong>Notas adicionales generales:</strong>
                 <p style="margin: 8px 0 0 0; color: #92400e;">{{notes}}</p>
             </div>
             {{/if}}

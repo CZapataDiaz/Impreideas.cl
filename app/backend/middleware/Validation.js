@@ -134,7 +134,7 @@ quoteCreate: Joi.object({
                 notes: Joi.string().max(1000).optional().allow('', null),
                 fileUploadId: Joi.string().uuid().optional().allow(null),
                 areaId: Joi.string().optional().allow('', null)
-            }).optional().default({})
+            }).optional()
         })
     ).required().messages({
         'array.min': 'Debe incluir al menos un producto en la cotización',
